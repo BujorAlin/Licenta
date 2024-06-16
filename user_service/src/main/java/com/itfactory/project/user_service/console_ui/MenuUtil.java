@@ -17,7 +17,7 @@ public class MenuUtil {
             if (optionsPermitted.contains(first)) {
                 choice = first;
             } else {
-                System.out.println("'" + input + "' nu este valida! Incercati din nou!");
+                System.out.println(" Comanda '" + input + "' nu este valida! Incercati din nou!");
 
             }
         }
