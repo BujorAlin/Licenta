@@ -20,9 +20,9 @@ public class AppTest
 {
 
     private static final String TEST_DB_FILE = "project_test.db";
-    private static final List<User> sampleUser = Arrays.asList(new User(-1,"Marian","Dumitras","marian_dumitras@yahoo.com",20),
-            new User(-1,"Ciprian","Andrei","andrei.ciprian@yahoo.com",27),
-            new User(-1,"Maria","Popescu","maria.posecu@yahoo.com",19));
+    private static final List<User> sampleUser = Arrays.asList(new User(-1,"Maria","Dumitrescu","maria_dumitrescu@yahoo.com",32),
+            new User(-1,"Popescu","Andra","andra.Popescu@yahoo.com",50),
+            new User(-1,"Bucum","Paulin","Bucum.Paulin@yahoo.com",45));
 
     private final UserDao user = new UserDao();
 
