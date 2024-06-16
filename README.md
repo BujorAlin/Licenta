@@ -1,17 +1,17 @@
 # UsersService
-Console application for managing users in a database
-The application scope is to apply CRUD operations for User class.
-Before running the application you should run a 'maven clean install' to be sure all dependencies have been installed or updated.
-The project can be runned only if you have Java 8 or greater installed.
+Aplicația la nivel de consolă pentru gestionarea utilizatorilor dintr-o bază de date.
+Scopul aplicației este de a aplica operațiuni CRUD pentru clasa User.
+Înainte de a rula aplicația, ar trebui să rulați comanda „maven clean install” pentru a vă asigura că toate dependențele au fost instalate sau actualizate.
+Proiectul poate fi rulat numai dacă aveți instalat Java 8 sau o versiune superioară.
 
-  In the main folder can be found two packages:
-  1.The main folder which will be described bellow;
-  2.The test folder.
-  The main folder is structured in three sub-folders and Main Class:
-1. Dto - where can be found the class User
-2. Service - where can be found the services for creating the Db connection and the table used in application
-3. ConsoleUi where can be found the main logic used in the application.
-4. Main Class from where the application can be started.
-   The test folder contains some specific tests using a temporary test db.
+În folderul principal pot fi găsite două pachete:
+1. Dosarul principal care va fi descris mai jos;
+2. Dosarul de testare.
+   Dosarul principal este structurat în trei subdirectoare și Clasa principală:
+1. Dto - unde poate fi găsită clasa User.
+2. Service - unde se gasesc serviciile de creare a conexiunii Db si tabelul folosit in aplicatie.
+3. ConsoleUi unde poate fi găsită logica principală folosită în aplicație.
+4. Clasa principală de unde poate fi pornită aplicația.
+   Dosarul de testare conține câteva teste specifice folosind un db de testare temporar.
 
-The project uses the main knowledge acquired from the Java course at ItFactory.
+Proiectul folosește cunoștințele principale dobândite din cursul Java de la ItFactory.
