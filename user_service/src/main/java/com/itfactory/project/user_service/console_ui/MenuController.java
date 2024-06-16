@@ -20,17 +20,15 @@ public class MenuController {
 
            switch (c){
                case 'A':
-                   int id = MenuUtil.readInt("Introduceti ID asociat userului: ");
+                   int id = MenuUtil.readInt("Introduceti ID asociat userului: ",false);
                    Optional<User> foundUser = userDao.getById(id);
                    if(foundUser.isPresent()){
                        System.out.println(foundUser);
                    }else{
-                       System.out.println("Nu este nici un user cu acest ID: "+id);
+                       System.out.println("Nu exista user cu ID: "+id);
                    }
                    break;
-                   /*User newUser = EditUserController.readNewUser();
-                   userDao.insert(newUser);
-                   break;*/
+
                case 'B':
                    List<User>  users = userDao.getAllUsers();
                    if(!users.isEmpty()){
@@ -39,47 +37,34 @@ public class MenuController {
                        System.out.println("Nu exista nici un user de aratat!");
                    }
                    break;
-                   /*int id = MenuUtil.readInt("Insert id of user to be shown: ");
-                   Optional<User> foundUser = userDao.getById(id);
-                   if(foundUser.isPresent()){
-                       System.out.println(foundUser);
-                   }else{
-                       System.out.println("There is no user with id: "+id);
-                   }
-                   break;*/
+
                case 'C':
                    User newUser = EditUserController.readNewUser();
                    userDao.insert(newUser);
                    break;
-                   /*List<User>  users = userDao.getAllUsers();
-                   if(!users.isEmpty()){
-                       users.forEach(System.out::println);
-                   }else{
-                       System.out.println("There is no use to be shown!");
-                   }
-                   break;*/
+
                case 'D':
-                   int idDelete = MenuUtil.readInt("Introduceti userul ce doriti sa il stergeti: ");
+                   int idDelete = MenuUtil.readInt("Introduceti userul ce doriti sa il stergeti: ",false);
                    Optional<User> userToBeDeleted = userDao.getById(idDelete);
                    if(userToBeDeleted.isPresent()){
                        userDao.delete(idDelete);
                    }else{
-                       System.out.println("There is no user with id : "+idDelete);
+                       System.out.println("Nu exista user cu ID : "+idDelete);
                    }
                    break;
                case 'E':
-                   int idUpdate = MenuUtil.readInt("Insert id of user for update: ");
+                   int idUpdate = MenuUtil.readInt("Introduceti ID userului pentru modificare: ",false);
                    Optional<User> userExist = userDao.getById(idUpdate);
                    if(userExist.isPresent()){
                        User userForUpdate = userExist.get();
                        User updatedUser = EditUserController.readUserForUpdate(userForUpdate,idUpdate);
                        userDao.getById(idUpdate).ifPresent(user -> userDao.update(updatedUser));
                    }else{
-                       System.out.println("There is no user with id: "+idUpdate);
+                       System.out.println("Nu exista user cu ID: "+idUpdate);
                    }
                    break;
                default:
-                   System.out.println("Bye");
+                   System.out.println("La revedere!");
                    return;
            }
         }

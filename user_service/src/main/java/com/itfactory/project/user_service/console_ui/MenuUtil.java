@@ -11,13 +11,13 @@ public class MenuUtil {
         char choice = '?';
         Scanner scanner = new Scanner(System.in);
         while (choice == '?') {
-            System.out.println("\n" + menu + "\nChoice? :");
+            System.out.println("\n" + menu + "\nAlegeti? :");
             String input = scanner.next().trim().toUpperCase();
             char first = input.length() >= 1 ? input.charAt(0) : '?';
             if (optionsPermitted.contains(first)) {
                 choice = first;
             } else {
-                System.out.println("'" + input + "' is not valid! Please try again!");
+                System.out.println("'" + input + "' nu este valida! Incercati din nou!");
 
             }
         }
@@ -35,9 +35,9 @@ public class MenuUtil {
         return input;
     }
 
-    static int readInt (String label){
+    static int readInt (String label, boolean allowEmpty){
         while (true){
-            String numberInput = readString (label, true);
+            String numberInput = readString (label, allowEmpty);
             try{
                 if("".equals(numberInput)){
                     return 0;
@@ -46,7 +46,7 @@ public class MenuUtil {
                 return Integer.parseInt(numberInput);
                 }
             }catch (NumberFormatException e ){
-                System.err.println(" You must insert a number! Try again!(error: " + e.getMessage()+")");
+                System.err.println(" Trebuie sa introduceti un numar! Incercati din nou!(eroare: " + e.getMessage()+")");
             }
         }
     }
